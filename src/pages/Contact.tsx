@@ -174,7 +174,7 @@ const Contact = () => {
       <section 
         className="py-20 bg-cover bg-center relative"
         style={{
-          backgroundImage: `linear-gradient(to bottom, #E6F4EA, #DFF6E0), url('/lovable-uploads/ad8283ca-b792-4d90-8c3d-fd4fb93783e0.png')`,
+          
           backgroundBlendMode: 'overlay'
         }}
       >

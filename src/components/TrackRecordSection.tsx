@@ -12,39 +12,39 @@ const TrackRecordSection = () => {
   const projects = [
     {
       id: 'electrical',
-      title: 'Electrical Infrastructure Upgrade',
-      client: 'Gauteng Infrastructure Development',
-      location: 'Gauteng Province',
-      description: 'Complete electrical reticulation upgrade for public facilities including hospitals and schools.',
+      title: 'Emergency repair of generators ',
+      client: 'Department of Health',
+      location: 'Chris Hani Baragwanath Academic Hospital',
+      description: 'Rapid deployment and repair of critical power generators to restore backup power supply and ensure uninterrupted hospital operations during emergencies.',
       status: 'Completed',
       statusColor: 'bg-green-500',
-      image: '/lovable-uploads/9bf992af-a477-419e-a469-fbdc7284bdd5.png',
+      image: '/lovable-uploads/abhijeet-gaikwad-wUuq69GGLnU-unsplash.jpg',
       icon: Zap,
-      details: 'Comprehensive electrical system upgrades across multiple facilities'
+      details: 'Rapid deployment and repair of critical power generators to restore backup power supply and ensure uninterrupted hospital operations during emergencies.'
     },
     {
       id: 'maintenance',
-      title: 'Generator Maintenance Contract',
-      client: 'South African National Parks',
-      location: 'Multiple Locations',
-      description: 'Long-term maintenance contract for backup power systems across national parks.',
+      title: 'Replacement of electrical infrastructure ',
+      client: 'Department of Health',
+      location: 'Far East Rand Hospital',
+      description: 'Upgrade and modernization of outdated electrical systems to enhance safety, efficiency, and compliance with health sector regulations.',
       status: 'Completed',
       statusColor: 'bg-green-500',
-      image: '/lovable-uploads/89912599-945f-4086-b498-3b56cbecea30.png',
+      image: '/lovable-uploads/fahim-junaid-7MjXpkxFseU-unsplash.jpg',
       icon: Cog,
-      details: 'Five-year maintenance contract with quarterly inspections and servicing'
+      details: 'Upgrade and modernization of outdated electrical systems to enhance safety, efficiency, and compliance with health sector regulations.'
     },
     {
       id: 'mechanical',
-      title: 'Water Treatment Plant Upgrades',
-      client: 'Lepelle Northern Water',
-      location: 'Limpopo Province',
-      description: 'Pump station upgrades and electrical panel replacements for critical water infrastructure.',
+      title: 'HVAC installation and servicing ',
+      client: 'Department of Health',
+      location: 'Soshanguve Clinic',
+      description: 'Professional installation and routine servicing of heating, ventilation, and air conditioning systems to improve indoor air quality and patient comfort.',
       status: 'Completed',
       statusColor: 'bg-green-500',
       image: '/lovable-uploads/d40452a8-22e5-4f83-82e6-6aa6874b1207.png',
       icon: Building2,
-      details: 'Mechanical and electrical upgrades for pump stations and switchgear installations'
+      details: 'Professional installation and routine servicing of heating, ventilation, and air conditioning systems to improve indoor air quality and patient comfort.'
     }
   ];
 
