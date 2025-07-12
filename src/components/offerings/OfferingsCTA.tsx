@@ -16,7 +16,7 @@ const OfferingsCTA = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           Ready to Start Your Project?
         </h2>
-        <p className="block text-gramsak-green">
+        <p className="block text-black">
           Let us help you deliver your engineering project with precision, compliance,
           and excellence.
         </p>

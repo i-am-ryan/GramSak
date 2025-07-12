@@ -47,10 +47,10 @@ const AboutUs = () => {
                 About Gramsak
               </Badge>
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="text-black font-extrabold">Building Excellence</span>
-                <span className="block text-black font-extrabold">Since 2013</span>
+                <span className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">Building Excellence</span>
+                <span className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">Since 2013</span>
               </h1>
-              <p className="text-xl text-gramsak-green max-w-3xl mx-auto">
+              <p className="text-xl text-white drop-shadow-md max-w-3xl mx-auto">
                   100% Black female-owned, Level 1 B-BBEE electrical and mechanical engineering firm
               </p>
 
