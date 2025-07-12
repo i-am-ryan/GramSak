@@ -108,7 +108,7 @@ const Partners = () => {
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Trusted
-              <span className="block text-white">Partnerships</span>
+              <span className="block text-gramsak-green">Partnerships</span>
             </h1>
             <p className="text-lg text-white/90 max-w-3xl mx-auto">
               Working alongside South Africa's leading organizations to deliver exceptional engineering solutions

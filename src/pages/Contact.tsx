@@ -73,12 +73,12 @@ const Contact = () => {
             <Badge variant="outline" className="mb-4 text-white border-white">
               Contact Us
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
               Strategic Branch Network
-              <span className="text-4xl md:text-6xl font-bold mb-6 text-black">Across South Africa</span>
+            <span className="block text-white drop-shadow-lg">Across South Africa</span>
             </h1>
-            <p className="block text-gramsak-green">
-              With branches strategically located across key provinces, we ensure rapid response times and local expertise for all your engineering needs
+            <p className="text-xl text-white drop-shadow-md max-w-3xl mx-auto">
+            With branches strategically located across key provinces, we ensure rapid response times and local expertise for all your engineering needs.
             </p>
           </div>
         </div>
@@ -180,10 +180,10 @@ const Contact = () => {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 -mt-8">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-black">
+             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-black">
               Get In Touch
             </h2>
-            <p className="text-4xl md:text-6xl font-bold mb-6 text-black">
+            <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto">
               Ready to start your next engineering project? Contact our team for expert consultation and competitive quotes.
             </p>
           </div>
