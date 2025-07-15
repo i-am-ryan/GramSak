@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const OfferingsCTA = () => {
   return (
@@ -22,13 +23,15 @@ const OfferingsCTA = () => {
           Let us help you deliver your engineering project with precision, compliance,
           and excellence.
         </p>
-        <Button 
-          size="lg" 
-          className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+       <Link to="/contact#contact">
+  <Button 
+    size="lg" 
+    className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg"
+  >
+    Contact Us
+    <ArrowRight className="ml-2 h-5 w-5" />
+  </Button>
+</Link>
       </div>
     </section>
   );

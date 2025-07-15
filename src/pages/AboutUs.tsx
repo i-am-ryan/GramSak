@@ -48,7 +48,7 @@ const AboutUs = () => {
               </Badge>
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">Building Excellence</span>
-                <span className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg"> Since 2013</span>
+                <span className="block text-gramsak-green"> Since 2013</span>
               </h1>
               <p className="text-xl text-white drop-shadow-md max-w-3xl mx-auto">
                   100% Black female-owned, Level 1 B-BBEE electrical and mechanical engineering firm

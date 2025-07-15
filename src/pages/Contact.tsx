@@ -81,7 +81,7 @@ const Contact = () => {
       <section 
         className="pt-16 pb-16 bg-cover bg-center relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/linkedin-sales-solutions-YDVdprpgHv4-unsplash.jpg')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/christin-hume-hBuwVLcYTnA-unsplash.jpg')`
         }}
       >
         <div className="container mx-auto px-4">
@@ -91,7 +91,7 @@ const Contact = () => {
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
               Strategic Branch Network
-            <span className="block text-white drop-shadow-lg">Across South Africa</span>
+            <span className="block text-gramsak-green">Across South Africa</span>
             </h1>
             <p className="text-xl text-white drop-shadow-md max-w-3xl mx-auto">
             With branches strategically located, we ensure rapid response times and local expertise for all your engineering needs.
@@ -192,11 +192,15 @@ const Contact = () => {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 -mt-8">
-             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-black">
-              Get In Touch
-            </h2>
+              <h1 className="text-3xl md:text-5xl font-bold mb-4 text-black">
+              
+              <span className="block text-gramsak-green">
+                Get In Touch 
+              </span>
+            </h1>
+            
             <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto">
-              Ready to start your next engineering project? Contact our team for expert consultation and competitive quotes.
+              Contact our team for expert consultation and competitive quotes.
             </p>
           </div>
 

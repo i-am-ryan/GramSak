@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -121,14 +122,16 @@ const HeroSection = () => {
                 Explore Our Services
               </Button>
               
-              <Button 
-                onClick={handleProjectsClick}
-                size="lg" 
-                variant="outline"
-                className="text-lg px-12 py-6 bg-white hover:bg-gray-50 text-gray-900 border-2 border-white font-semibold min-w-[200px]"
-              >
-                View Our Projects
-              </Button>
+             <Link to="/projects">
+  <Button  
+    size="lg" 
+    variant="outline"
+    className="text-lg px-12 py-6 bg-white hover:bg-gray-50 text-gray-900 border-2 border-white font-semibold min-w-[200px]"
+  >
+    View Our Projects
+    <ArrowRight className="ml-2 h-5 w-5" />
+  </Button>
+</Link>
             </div>
           </div>
         </div>

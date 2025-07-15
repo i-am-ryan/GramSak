@@ -58,7 +58,7 @@ const ContactSection = () => {
           }}
         >
           <div className="relative z-10 text-center text-white">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="block text-gramsak-green">
               Get In Touch
               <span className="block text-primary">Let's Build Together</span>
             </h2>

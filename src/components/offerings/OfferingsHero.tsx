@@ -16,9 +16,10 @@ const OfferingsHero = () => {
           <Badge variant="outline" className="mb-6 text-white border-white">
             Our Services
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Our Offerings
-          </h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+              Our services
+            <span className="block text-gramsak-green">and Offerings</span>
+            </h1>
           <p className="text-xl text-white drop-shadow-md max-w-3xl mx-auto">
             Gramsak delivers a robust and compliant portfolio of electrical and mechanical
             services, guided by our CIDB Grading Designations.
