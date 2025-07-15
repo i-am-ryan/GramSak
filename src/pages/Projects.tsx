@@ -94,14 +94,8 @@ const Projects = () => {
       deliverables: 'All units serviced and tested',
       date: '2023'
     },
-    {
-      client: 'Gauteng Department of Infrastructure Development',
-      location: 'Ekurhuleni Region – Dunswart',
-      scope: 'Laundry Electrical Equipment Maintenance',
-      deliverables: 'All systems repaired and running',
-      date: '2023'
-    }
-  ];
+    
+  ];s
 
   const mechanicalProjects = [
     {
@@ -125,13 +119,7 @@ const Projects = () => {
       deliverables: 'Refrigeration systems maintained',
       date: '2023–2024'
     },
-    {
-      client: 'Gauteng Department of Infrastructure Development',
-      location: 'Ekurhuleni Region – Ikhaya Le Themba',
-      scope: 'Quarterly AC Service',
-      deliverables: 'Split units maintained',
-      date: '2023–2024'
-    },
+
     {
       client: 'Gauteng Department of Infrastructure Development',
       location: 'Tshwane Region – Soshanguve 2 Clinic',

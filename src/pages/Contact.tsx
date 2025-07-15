@@ -15,33 +15,33 @@ const Contact = () => {
       id: 'head-office',
       name: 'Head Office',
       address: 'Boskruin View Office Park, 180 Girdwood Avenue, Bush Hill, Boskruin, Randburg, Gauteng',
+      name2: 'Cosmo City Office',
+      address2: '85 Mauritania Crescent, Cosmo City Ext 2, Cosmo City, Gauteng 2188',
       phone: '011 568 2130',
       mobile: '079 118 2887',
       email: 'admin@gramsak.co.za',
-      established: 'Est. 2013',
-      specializations: ['General Building', 'Electrical Engineering', 'Mechanical Engineering'],
+      established1: 'Head Office Est. 2013',
+      established: ' Cosmo City Office Est. 2016',
       backgroundImage: '/lovable-uploads/93d272f8-56f5-4a6e-b269-a6baf3e47828.png'
     },
     {
       id: 'cosmo-city',
       name: 'Cosmo City Office',
-      address: '85 Mauritania Crescent, Cosmo City Ext 2, Cosmo City, Gauteng 2188',
+      address2: '85 Mauritania Crescent, Cosmo City Ext 2, Cosmo City, Gauteng 2188',
       phone: '011 568 2130',
       mobile: '079 118 2887',
       email: 'admin@gramsak.co.za',
       established: 'Est. 2016',
-      specializations: ['Mining Maintenance', 'Equipment Supply', 'Electrical Engineering'],
       backgroundImage: '/lovable-uploads/2756124a-3c9c-471d-8044-41572d247fdd.png'
     },
     {
       id: 'welkom',
-      name: 'Welkom Office',
+      name: 'Free State Office',
       address: '27 Toronto Road, St Helena, Welkom, Free State 3088',
       phone: '011 568 2130',
       mobile: '079 118 2887',
       email: 'admin@gramsak.co.za',
       established: 'Est. 2018',
-      specializations: ['Water Treatment', 'Mechanical Engineering', 'Fire Services'],
       backgroundImage: '/lovable-uploads/e30d7c45-da57-49b0-a6a3-7c81f75aa8b6.png'
     },
     {
@@ -52,7 +52,6 @@ const Contact = () => {
       mobile: '079 118 2887',
       email: 'admin@gramsak.co.za',
       established: 'Est. 2018',
-      specializations: ['General Building', 'Civil Engineering', 'Rural Infrastructure'],
       backgroundImage: '/lovable-uploads/1d456a02-038b-406a-8080-a4d6c0ddf435.png'
     }
   ];

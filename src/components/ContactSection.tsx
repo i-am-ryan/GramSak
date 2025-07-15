@@ -1,15 +1,56 @@
-
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    company: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    setFormData({...formData, [e.target.name]: e.target.value});
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("/send-mail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+
+      if (res.ok) {
+        alert("Your message was sent successfully! We will get back to you shortly.");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          company: "",
+          message: ""
+        });
+      } else {
+        alert("There was a problem sending your message. Please try again later.");
+      }
+    } catch (err) {
+      alert("Network error. Please check your connection.");
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-50/50">
       <div className="container mx-auto px-4">
-        {/* Hero section with background image */}
+
         <div 
           className="relative py-24 mb-16 bg-cover bg-center bg-no-repeat rounded-lg overflow-hidden"
           style={{
@@ -34,16 +75,16 @@ const ContactSection = () => {
               <CardTitle className="text-2xl text-gray-900">Send us a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input placeholder="First Name" className="border-gray-200" />
-                  <Input placeholder="Last Name" className="border-gray-200" />
+                  <Input name="firstName" value={formData.firstName} onChange={handleChange} placeholder="First Name" className="border-gray-200" required />
+                  <Input name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Last Name" className="border-gray-200" required />
                 </div>
-                <Input placeholder="Email Address" type="email" className="border-gray-200" />
-                <Input placeholder="Phone Number" type="tel" className="border-gray-200" />
-                <Input placeholder="Company/Organization" className="border-gray-200" />
-                <Textarea placeholder="Project Details & Requirements" rows={4} className="border-gray-200" />
-                <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
+                <Input name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" type="email" className="border-gray-200" required />
+                <Input name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" type="tel" className="border-gray-200" />
+                <Input name="company" value={formData.company} onChange={handleChange} placeholder="Company/Organization" className="border-gray-200" />
+                <Textarea name="message" value={formData.message} onChange={handleChange} placeholder="Project Details & Requirements" rows={4} className="border-gray-200" required />
+                <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
                   Send Message
                 </Button>
               </form>
