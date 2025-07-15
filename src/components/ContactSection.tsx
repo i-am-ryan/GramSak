@@ -58,10 +58,13 @@ const ContactSection = () => {
           }}
         >
           <div className="relative z-10 text-center text-white">
-            <h2 className="block text-gramsak-green">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white animate-fade-in">
               Get In Touch
-              <span className="block text-primary">Let's Build Together</span>
-            </h2>
+              <span className="block text-gramsak-green">
+               Let's Build Together
+              </span>
+            </h1>
+            
             <p className="text-lg text-white/90 max-w-3xl mx-auto">
               Ready to start your next engineering project? Contact our team for expert consultation and competitive quotes.
             </p>
