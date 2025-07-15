@@ -95,7 +95,7 @@ const Projects = () => {
       date: '2023'
     },
     
-  ];s
+  ];
 
   const mechanicalProjects = [
     {

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Moon, Sun } from 'lucide-react';
@@ -23,7 +22,8 @@ const Header = () => {
     { label: 'About Us', href: '/about-us', isRoute: true },
     { label: 'Our Offerings', href: '/our-offerings', isRoute: true },
     { label: 'Projects', href: '/projects', isRoute: true },
-    { label: 'Partners', href: '/partners', isRoute: true },
+    { label: 'Partners', href: '/new-partners', isRoute: true },
+    { label: 'Clients', href: '/partners', isRoute: true },
     { label: 'Contact Us', href: '/contact', isRoute: true }
   ];
 

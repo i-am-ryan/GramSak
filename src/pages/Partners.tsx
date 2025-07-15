@@ -42,8 +42,8 @@ const Partners = () => {
     {
       id: 5,
       name: 'Dawaila',
-      logo: '/lovable-uploads/aa87c3dc-e11a-47b3-a612-b4efa93b5b17.png',
-      about: 'Dawaila is a private sector company focusing on smart and sustainable built environment projects, especially in housing and community infrastructure.',
+      logo: '/lovable-uploads/Dawaila.PNG',
+      about: 'Dawaila is a private sector company focusing in Building Construction and Development, Civil Engineering, Mechanical Engineering, and Electrical Engineering. .',
       role: 'Collaborates with Gramsak on specialist building works, civil projects, and sustainable site solutions.'
     },
     {
@@ -87,6 +87,20 @@ const Partners = () => {
       logo: '/lovable-uploads/a5fdc9a7-db97-4839-b1e8-a4256b807d8e.png',
       about: 'The CIDB is South Africa\'s official regulatory body for the construction industry. It maintains a national register of contractors, grades construction firms by capability, and ensures fair, compliant public procurement.',
       role: 'Gramsak is a fully CIDB-graded contractor — registered and compliant for a wide range of civil, electrical, and general building works, meeting all industry quality, safety, and delivery standards.'
+    },
+     {
+      id: 12,
+      name: 'Independent Development Trust (IDT)',
+      logo: '/lovable-uploads/IDT.PNG',
+      about: 'Public sector entity managing social infrastructure projects.',
+      role: 'Implementation partner for public infrastructure maintenance and engineering projects.'
+    },
+     {
+      id: 13,
+      name: 'Jiraflo',
+      logo: '/lovable-uploads/Jiraflo.PNG',
+      about: 'Jiraflo is a private sector company focusing on smart and sustainable built environment projects, especially in housing and community infrastructure.',
+      role: 'Collaborates with Gramsak on specialist electrical, mechanical works and sustainable site solutions.'
     }
   ];
 
@@ -98,7 +112,7 @@ const Partners = () => {
       <section 
         className="relative pt-20 pb-16 bg-cover bg-center"
         style={{ 
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/lovable-uploads/a2202fba-c882-492e-9ede-6629074eb700.png')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/lovable-uploads/linkedin-sales-solutions-YDVdprpgHv4-unsplash.jpg')`
         }}
       >
         <div className="container mx-auto px-4">
@@ -108,10 +122,10 @@ const Partners = () => {
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Trusted
-              <span className="block text-gramsak-green">Partnerships</span>
+              <span className="block text-gramsak-green">Clients</span>
             </h1>
             <p className="text-lg text-white/90 max-w-3xl mx-auto">
-              Working alongside South Africa's leading organizations to deliver exceptional engineering solutions
+              Working alongside South Africa's leading organisations to deliver exceptional engineering solutions
             </p>
           </div>
         </div>

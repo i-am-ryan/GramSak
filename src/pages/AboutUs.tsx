@@ -48,7 +48,7 @@ const AboutUs = () => {
               </Badge>
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">Building Excellence</span>
-                <span className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">Since 2013</span>
+                <span className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg"> Since 2013</span>
               </h1>
               <p className="text-xl text-white drop-shadow-md max-w-3xl mx-auto">
                   100% Black female-owned, Level 1 B-BBEE electrical and mechanical engineering firm
@@ -203,7 +203,7 @@ const AboutUs = () => {
               <div className="relative text-center text-white">
                 <h2 className="text-3xl font-bold mb-6">Our Standards</h2>
                 <p className="text-lg leading-relaxed max-w-4xl mx-auto">
-                  Gramsak only works with SABS-approved, premium-quality materials applied strictly according to manufacturers' specifications. We partner exclusively with ISO 9001:2000-certified suppliers, ensuring consistent product quality and safety compliance across all our operations. Each team member is trained in specific tasks, contributing to superior workmanship and job satisfaction across our organisation.
+                  Gramsak works with SABS-approved, premium-quality materials applied strictly according to manufacturers' specifications. We partner with certified suppliers, ensuring consistent product quality and safety compliance across all our operations. Each team member is trained in specific tasks, contributing to superior workmanship and job satisfaction across our organisation.
                 </p>
               </div>
             </div>

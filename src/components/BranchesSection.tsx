@@ -49,7 +49,7 @@ const BranchesSection = () => {
       <section 
         className="relative py-20 bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(22, 163, 74, 0.85), rgba(22, 163, 74, 0.85)), url('/lovable-uploads/ad8283ca-b792-4d90-8c3d-fd4fb93783e0.png')`
+          backgroundImage: `linear-gradient(rgba(22, 163, 74, 0.85), rgba(22, 163, 74, 0.85)), url('/lovable-uploads/linkedin-sales-solutions-YDVdprpgHv4-unsplash.jpg')`
         }}
       >
         <div className="container mx-auto px-4 text-center">
@@ -83,7 +83,7 @@ const BranchesSection = () => {
               <span className="block">Across South Africa</span>
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              With branches strategically located across key provinces, we ensure rapid response times and local expertise for all your engineering needs.
+              With branches strategically located, we ensure rapid response times and local expertise for all your engineering needs.
             </p>
           </div>
 

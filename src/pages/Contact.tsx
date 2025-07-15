@@ -11,23 +11,22 @@ const Contact = () => {
   const [hoveredLocation, setHoveredLocation] = useState<string | null>(null);
 
   const locations = [
-    {
-      id: 'head-office',
-      name: 'Head Office',
-      address: 'Boskruin View Office Park, 180 Girdwood Avenue, Bush Hill, Boskruin, Randburg, Gauteng',
-      name2: 'Cosmo City Office',
-      address2: '85 Mauritania Crescent, Cosmo City Ext 2, Cosmo City, Gauteng 2188',
-      phone: '011 568 2130',
-      mobile: '079 118 2887',
-      email: 'admin@gramsak.co.za',
-      established1: 'Head Office Est. 2013',
-      established: ' Cosmo City Office Est. 2016',
-      backgroundImage: '/lovable-uploads/93d272f8-56f5-4a6e-b269-a6baf3e47828.png'
-    },
+  {
+  id: 'head-office',
+  name: 'Gauteng Office',
+  subName: 'Head Office',
+  address: 'Boskruin View Office Park,180 Girdwood Avenue, Bush Hill, Boskruin, Randburg, Gauteng',
+  phone: '011 568 2130',
+  mobile: '079 118 2887',
+  email: 'admin@gramsak.co.za',
+  established: 'Est. 2013',
+  backgroundImage: '/lovable-uploads/93d272f8-56f5-4a6e-b269-a6baf3e47828.png'
+}
+  ,
     {
       id: 'cosmo-city',
-      name: 'Cosmo City Office',
-      address2: '85 Mauritania Crescent, Cosmo City Ext 2, Cosmo City, Gauteng 2188',
+      name: 'Gauteng Office',
+      address: '85 Mauritania Crescent, Cosmo City Ext 2, Cosmo City, Gauteng 2188',
       phone: '011 568 2130',
       mobile: '079 118 2887',
       email: 'admin@gramsak.co.za',
@@ -38,7 +37,6 @@ const Contact = () => {
       id: 'welkom',
       name: 'Free State Office',
       address: '27 Toronto Road, St Helena, Welkom, Free State 3088',
-      phone: '011 568 2130',
       mobile: '079 118 2887',
       email: 'admin@gramsak.co.za',
       established: 'Est. 2018',
@@ -48,12 +46,31 @@ const Contact = () => {
       id: 'eastern-cape',
       name: 'Eastern Cape Office',
       address: '7 Evergreen Walk, Laurie Dashwood, Enoch Mgijima NU1, Eastern Cape 5320',
-      phone: '011 568 2130',
       mobile: '079 118 2887',
       email: 'admin@gramsak.co.za',
       established: 'Est. 2018',
       backgroundImage: '/lovable-uploads/1d456a02-038b-406a-8080-a4d6c0ddf435.png'
-    }
+    },
+
+    {
+  id: 'joburg-skyline',
+  name: 'North West Office',
+  address: '11 Pikkenwyn Avenue, Safari Tuine, Rusternburg, 2199',
+  mobile: '079 118 2887',
+  email: 'admin@gramsak.co.za',
+  established: 'Est. 2020',
+  backgroundImage: '/lovable-uploads/clodagh-da-paixao-xvJVDUoGpoU-unsplash.jpg'
+},
+{
+  id: 'joburg-street',
+  name: 'Limpopo Office',
+  address: ' 1 Hamman street, Groblersdal, 0470',
+  mobile: '079 118 2887',
+  email: 'admin@gramsak.co.za',
+  established: 'Est. 2020',
+  backgroundImage: '/lovable-uploads/gauta-nkwe-TjpMHG1Nzd4-unsplash.jpg'
+}
+
   ];
 
   return (
@@ -64,7 +81,7 @@ const Contact = () => {
       <section 
         className="pt-16 pb-16 bg-cover bg-center relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/d41abd13-e151-4ac2-adc9-29e88ce214b5.png')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/linkedin-sales-solutions-YDVdprpgHv4-unsplash.jpg')`
         }}
       >
         <div className="container mx-auto px-4">
@@ -77,7 +94,7 @@ const Contact = () => {
             <span className="block text-white drop-shadow-lg">Across South Africa</span>
             </h1>
             <p className="text-xl text-white drop-shadow-md max-w-3xl mx-auto">
-            With branches strategically located across key provinces, we ensure rapid response times and local expertise for all your engineering needs.
+            With branches strategically located, we ensure rapid response times and local expertise for all your engineering needs.
             </p>
           </div>
         </div>
@@ -103,6 +120,11 @@ const Contact = () => {
                       <h3 className="font-bold text-xl text-foreground mb-4">
                         {location.name}
                       </h3>
+                    {location.subName && (
+  <p className="text-sm text-muted-foreground font-semibold">
+    {location.subName}
+  </p>
+)}
                       <p className="text-sm text-muted-foreground mb-6">
                         {location.address.split(',')[1] || location.address.split(',')[0]}
                       </p>
@@ -150,16 +172,7 @@ const Contact = () => {
                         </div>
                       </div>
                       
-                      <div>
-                        <h5 className="font-semibold text-base mb-4">Specializations:</h5>
-                        <div className="flex flex-wrap gap-2">
-                          {location.specializations.map((spec, index) => (
-                            <Badge key={index} variant="secondary" className="text-xs bg-primary/20 text-white border-primary/30">
-                              {spec}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
+                     
                     </div>
                   </div>
                 </div>
