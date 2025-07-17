@@ -24,8 +24,9 @@ const ContactWidget = () => {
       icon: MessageCircle,
       label: 'WhatsApp',
       value: 'Quick Support',
-      action: () => window.open('https://wa.me/27791182887?text=Hello%20Gramsak%20Support')
+      action: () => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=admin@gramsak.co.za')
     }
+
   ];
 
   return (

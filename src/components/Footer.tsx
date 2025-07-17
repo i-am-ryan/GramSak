@@ -69,7 +69,7 @@ const Footer = () => {
               Certifications & Compliance
             </h3>
             <div className="space-y-2">
-              {['CIDB Registered', 'NHBRC Certified', 'SABS Approved', 'OSHACT Compliant'].map((cert) => (
+              {['CIDB Registered', 'NHBRC Certified', 'Department of Labour', 'SABS Approved', 'OSHACT Compliant'].map((cert) => (
                 <Badge key={cert} variant="outline" className="border-white/30 text-white block w-fit mb-2">
                   {cert}
                 </Badge>

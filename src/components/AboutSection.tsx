@@ -43,7 +43,7 @@ const AboutSection = () => {
         {/* 2. Clean Hero Strip */}
         <div className="text-center mb-16 animate-fade-in">
             <p className="text-lg md:text-xl text-black max-w-5xl mx-auto leading-relaxed">
-            Gramsak is a proudly South African, CIDB and CSD registered engineering firm that delivers reliable, 
+            Gramsak is a proudly South African,  registered engineering firm that delivers reliable, 
             compliant, and efficient solutions to public and private institutions. From power systems and HVAC 
             to specialised hospital upgrades, we've completed projects across multiple provinces, including some 
             of the country's most remote regions.

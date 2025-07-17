@@ -63,7 +63,7 @@ const WhyChooseSection = () => {
 
         <div className="text-center">
           <p className="text-muted-foreground max-w-4xl mx-auto">
-            We uphold the highest health, safety, and quality standards, using only SABS-approved
+            We uphold the highest health, safety, and quality standards, using SABS-approved
             materials and partnering with ISO-certified suppliers to ensure long-lasting, compliant
             outcomes.
           </p>
