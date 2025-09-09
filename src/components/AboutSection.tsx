@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 const AboutSection = () => {
@@ -30,7 +29,6 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        
         {/* 1. Intro Heading with Green Highlight */}
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
@@ -42,18 +40,17 @@ const AboutSection = () => {
 
         {/* 2. Clean Hero Strip */}
         <div className="text-center mb-16 animate-fade-in">
-            <p className="text-lg md:text-xl text-black max-w-5xl mx-auto leading-relaxed">
-            Gramsak is a proudly South African,  registered engineering firm that delivers reliable, 
-            compliant, and efficient solutions to public and private institutions. From power systems and HVAC 
-            to specialised hospital upgrades, we've completed projects across multiple provinces, including some 
+          <p className="text-lg md:text-xl text-black max-w-5xl mx-auto leading-relaxed mb-8">
+            Gramsak is a proudly South African, registered engineering firm that delivers reliable,
+            compliant, and efficient solutions to public and private institutions. From power systems and HVAC
+            to specialised hospital upgrades, we've completed projects across multiple provinces, including some
             of the country's most remote regions.
-
-          <h2 className="text-1xl md:text-6xl font-bold mb-6">
-            <span className="text-foreground"></span>
-            <br />
-            <span className="text-gramsak-green">We work where others won't-reliably,safely, and professionally</span>
-          </h2>
           </p>
+          
+          {/* Sub-heading with proper sizing */}
+          <h3 className="text-2xl md:text-3xl font-bold text-gramsak-green max-w-4xl mx-auto leading-tight">
+            We work where others won't — reliably, safely, and professionally
+          </h3>
         </div>
 
         {/* 3. Visual Grid/Mosaic */}
@@ -86,7 +83,7 @@ const AboutSection = () => {
         {/* 4. Quote Banner */}
         <div className="mb-16 animate-slide-in-left">
           <div className="bg-gramsak-green py-12 px-5 rounded-2xl text-center shadow-lg">
-            <blockquote className="text-white text-1xl md:text-4xl font-serif italic max-w-4xl mx-auto">
+            <blockquote className="text-white text-xl md:text-2xl font-serif italic max-w-4xl mx-auto">
               "We work where others won't — reliably, safely, and professionally."
             </blockquote>
           </div>
