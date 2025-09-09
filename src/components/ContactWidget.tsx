@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -23,10 +22,9 @@ const ContactWidget = () => {
     {
       icon: MessageCircle,
       label: 'WhatsApp',
-      value: 'Quick Support',
-      action: () => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=admin@gramsak.co.za')
+      value: '079 118 2887',
+      action: () => window.open('https://wa.me/27791182887?text=Hello%20Gramsak,%20I%20would%20like%20to%20inquire%20about%20your%20engineering%20services.')
     }
-
   ];
 
   return (
