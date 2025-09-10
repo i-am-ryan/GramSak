@@ -72,7 +72,7 @@ const TrackRecordSection = () => {
                 <span className="block text-green-400">Across Industries</span>
               </h2>
               <p className="text-lg text-white/90 max-w-3xl mx-auto">
-                Delivering excellence across electrical and mechanical engineering projects throughout South Africa
+               Delivering excellence across multi-disciplinary engineering projects throughout South Africa.
               </p>
             </div>
           </div>

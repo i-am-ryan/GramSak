@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -68,82 +67,82 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Hidden on mobile */}
       <Button
         variant="ghost"
         size="icon"
-        className="absolute left-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white"
+        className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white"
         onClick={prevImage}
       >
-        <ArrowLeft className="h-6 w-6" />
+        <ArrowLeft className="h-5 w-5 lg:h-6 lg:w-6" />
       </Button>
 
       <Button
         variant="ghost"
         size="icon"
-        className="absolute right-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white"
+        className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white"
         onClick={nextImage}
       >
-        <ArrowRight className="h-6 w-6" />
+        <ArrowRight className="h-5 w-5 lg:h-6 lg:w-6" />
       </Button>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full">
-        <div className="container mx-auto px-4">
-          <div className="text-center text-white space-y-8 max-w-4xl mx-auto">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto">
+          <div className="text-center text-white space-y-6 sm:space-y-8 max-w-5xl mx-auto">
             
-            {/* Main Tagline - Reduced Font Size */}
-            <div className="space-y-6 mb-12">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+            {/* Main Tagline - Responsive Font Sizes */}
+            <div className="space-y-3 sm:space-y-4 lg:space-y-6 mb-8 sm:mb-10 lg:mb-12">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
                 RELIABLE, INNOVATIVE,
               </h1>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
                 AND COST-EFFECTIVE
               </h1>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
                 ENGINEERING SOLUTIONS
               </h1>
             </div>
 
-            {/* Description Text - Positioned higher to avoid bullet points */}
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <p className="text-xl md:text-2xl leading-relaxed text-gray-200">
-                Delivering high-performance electrical and mechanical solutions with proven experience, certified excellence, and a passion for service.
+            {/* Description Text - Better mobile spacing and sizing */}
+            <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-12 lg:mb-16">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-200 px-2 sm:px-4">
+                Delivering high-performance multi-disciplinary engineering solutions with proven experience, certified excellence, and a passion for service.
               </p>
             </div>
 
-            {/* CTA Buttons - Services (Green) and Projects (White) */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            {/* CTA Buttons - Better mobile stacking */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-lg sm:max-w-none mx-auto">
               <Button 
                 onClick={handleServicesClick}
                 size="lg" 
-                className="text-lg px-12 py-6 bg-primary hover:bg-primary/90 text-white font-semibold min-w-[200px]"
+                className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 bg-primary hover:bg-primary/90 text-white font-semibold min-w-[180px] sm:min-w-[200px]"
               >
                 Explore Our Services
               </Button>
               
-             <Link to="/projects">
-  <Button  
-    size="lg" 
-    variant="outline"
-    className="text-lg px-12 py-6 bg-white hover:bg-gray-50 text-gray-900 border-2 border-white font-semibold min-w-[200px]"
-  >
-    View Our Projects
-    <ArrowRight className="ml-2 h-5 w-5" />
-  </Button>
-</Link>
+              <Link to="/projects" className="w-full sm:w-auto">
+                <Button  
+                  size="lg" 
+                  variant="outline"
+                  className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 bg-white hover:bg-gray-50 text-gray-900 border-2 border-white font-semibold min-w-[180px] sm:min-w-[200px]"
+                >
+                  View Our Projects
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Image Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+      {/* Image Indicators - Better mobile positioning */}
+      <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
         {backgroundImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentImageIndex(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
+            className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-colors ${
               index === currentImageIndex ? 'bg-white' : 'bg-white/40 hover:bg-white/60'
             }`}
           />

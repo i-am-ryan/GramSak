@@ -186,7 +186,7 @@ const Projects = () => {
               <span className="block text-gramsak-green">Excellence</span>
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Delivering precision and innovation across electrical and mechanical engineering projects
+Delivering precision and innovation across multiple engineering projects.
             </p>
           </div>
         </div>

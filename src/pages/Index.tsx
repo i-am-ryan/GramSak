@@ -23,7 +23,7 @@ const Index = () => {
           <AboutSection />
           <ServicesSection />
           <TrackRecordSection />
-          <CredentialsSection />
+          
           <ContactSection />
         </main>
         

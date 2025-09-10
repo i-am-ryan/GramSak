@@ -3,7 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -15,22 +16,36 @@ const ContactSection = () => {
     message: ""
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
   const handleChange = (e) => {
     setFormData({...formData, [e.target.name]: e.target.value});
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     try {
-      const res = await fetch("/send-mail.php", {
+      const response = await fetch("/api/send-email", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
-      if (res.ok) {
-        alert("Your message was sent successfully! We will get back to you shortly.");
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent Successfully! ✅",
+          description: "Thank you for contacting Gramsak. We'll get back to you within 24 hours.",
+          duration: 5000,
+        });
+
+        // Reset form
         setFormData({
           firstName: "",
           lastName: "",
@@ -40,10 +55,18 @@ const ContactSection = () => {
           message: ""
         });
       } else {
-        alert("There was a problem sending your message. Please try again later.");
+        throw new Error(result.message || "Failed to send message");
       }
-    } catch (err) {
-      alert("Network error. Please check your connection.");
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast({
+        variant: "destructive",
+        title: "Failed to Send Message ❌",
+        description: "There was a problem sending your message. Please try again or contact us directly.",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -80,16 +103,80 @@ const ContactSection = () => {
             <CardContent>
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input name="firstName" value={formData.firstName} onChange={handleChange} placeholder="First Name" className="border-gray-200" required />
-                  <Input name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Last Name" className="border-gray-200" required />
+                  <Input 
+                    name="firstName" 
+                    value={formData.firstName} 
+                    onChange={handleChange} 
+                    placeholder="First Name *" 
+                    className="border-gray-200" 
+                    required 
+                    disabled={isSubmitting}
+                  />
+                  <Input 
+                    name="lastName" 
+                    value={formData.lastName} 
+                    onChange={handleChange} 
+                    placeholder="Last Name *" 
+                    className="border-gray-200" 
+                    required 
+                    disabled={isSubmitting}
+                  />
                 </div>
-                <Input name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" type="email" className="border-gray-200" required />
-                <Input name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" type="tel" className="border-gray-200" />
-                <Input name="company" value={formData.company} onChange={handleChange} placeholder="Company/Organization" className="border-gray-200" />
-                <Textarea name="message" value={formData.message} onChange={handleChange} placeholder="Project Details & Requirements" rows={4} className="border-gray-200" required />
-                <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
-                  Send Message
+                <Input 
+                  name="email" 
+                  value={formData.email} 
+                  onChange={handleChange} 
+                  placeholder="Email Address *" 
+                  type="email" 
+                  className="border-gray-200" 
+                  required 
+                  disabled={isSubmitting}
+                />
+                <Input 
+                  name="phone" 
+                  value={formData.phone} 
+                  onChange={handleChange} 
+                  placeholder="Phone Number" 
+                  type="tel" 
+                  className="border-gray-200" 
+                  disabled={isSubmitting}
+                />
+                <Input 
+                  name="company" 
+                  value={formData.company} 
+                  onChange={handleChange} 
+                  placeholder="Company/Organization" 
+                  className="border-gray-200" 
+                  disabled={isSubmitting}
+                />
+                <Textarea 
+                  name="message" 
+                  value={formData.message} 
+                  onChange={handleChange} 
+                  placeholder="Project Details & Requirements *" 
+                  rows={4} 
+                  className="border-gray-200" 
+                  required 
+                  disabled={isSubmitting}
+                />
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary hover:bg-primary/90" 
+                  size="lg"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending Message...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
+                <p className="text-sm text-gray-500 text-center">
+                  * Required fields. We'll respond within 24 hours.
+                </p>
               </form>
             </CardContent>
           </Card>
@@ -122,8 +209,8 @@ const ContactSection = () => {
                   <div>
                     <h3 className="font-bold mb-2 text-gray-900">Phone</h3>
                     <p className="text-gray-600">
-                      📞 011 568 2130<br />
-                      📱 079 118 2887
+                      <a href="tel:0115682130" className="hover:text-primary transition-colors">📞 011 568 2130</a><br />
+                      <a href="tel:0791182887" className="hover:text-primary transition-colors">📱 079 118 2887</a>
                     </p>
                   </div>
                 </div>
@@ -139,7 +226,7 @@ const ContactSection = () => {
                   <div>
                     <h3 className="font-bold mb-2 text-gray-900">Email</h3>
                     <p className="text-gray-600">
-                      📧 admin@gramsak.co.za
+                      <a href="mailto:admin@gramsak.co.za" className="hover:text-primary transition-colors">📧 admin@gramsak.co.za</a>
                     </p>
                   </div>
                 </div>
@@ -157,6 +244,23 @@ const ContactSection = () => {
                     <p className="text-gray-600">
                       Monday - Friday: 8:00 AM - 5:00 PM<br />
                       Emergency Services: 24/7
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Response Time Guarantee */}
+            <Card className="shadow-md border-0 bg-green-50 border-green-200">
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-2 text-green-800">24-Hour Response Guarantee</h3>
+                    <p className="text-green-700 text-sm">
+                      We guarantee to respond to all inquiries within 24 hours during business days.
                     </p>
                   </div>
                 </div>

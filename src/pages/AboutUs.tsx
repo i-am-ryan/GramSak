@@ -51,7 +51,7 @@ const AboutUs = () => {
                 <span className="block text-gramsak-green"> Since 2013</span>
               </h1>
               <p className="text-xl text-white drop-shadow-md max-w-3xl mx-auto">
-                  100% Black female-owned, Level 1 B-BBEE electrical and mechanical engineering firm
+                  100% Black female-owned, Level 1 B-BBEE multi-disciplinary engineering firm.
               </p>
             </div>
           </div>

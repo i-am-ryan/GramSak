@@ -21,8 +21,7 @@ const OfferingsHero = () => {
             <span className="block text-gramsak-green">and Offerings</span>
             </h1>
           <p className="text-xl text-white drop-shadow-md max-w-3xl mx-auto">
-            Gramsak delivers a robust and compliant portfolio of electrical and mechanical
-            services, guided by our CIDB Grading Designations.
+            Gramsak delivers a robust and compliant portfolio of multi-disciplinary engineering services, guided by our CIDB grading designations.
           </p>
         </div>
       </div>
