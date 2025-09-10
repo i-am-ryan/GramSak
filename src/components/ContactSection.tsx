@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CheckCircle, Loader2 } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const ContactSection = () => {
@@ -62,7 +62,7 @@ const ContactSection = () => {
       toast({
         variant: "destructive",
         title: "Failed to Send Message ❌",
-        description: "There was a problem sending your message. Please try again or contact us directly.",
+        description: error.message || "There was a problem sending your message. Please try again or contact us directly.",
         duration: 5000,
       });
     } finally {
